@@ -234,9 +234,9 @@ if (isset($_POST['quiz'])) {
             array_push($arrAlternativas, $row['alternativa_1'], $row['alternativa_2'],$row['alternativa_3']);
             array_push($arrAlternativasCertas, $row['Alternativa_Certa']);
         }
-        $stringPerguntas = implode("*",$arrPerguntas);
-        $stringAlternativas = implode("*",$arrAlternativas);
-        $stringAlternativasCertas = implode("*",$arrAlternativasCertas);
+        $stringPerguntas = implode("]",$arrPerguntas);
+        $stringAlternativas = implode("]",$arrAlternativas);
+        $stringAlternativasCertas = implode("]",$arrAlternativasCertas);
          echo "$stringPerguntas@@@@$stringAlternativas@@@@$stringAlternativasCertas";      
     }
 }
