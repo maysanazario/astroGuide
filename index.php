@@ -16,9 +16,9 @@ use PHPMailer\PHPMailer\Exception;
 // Variáveis de acesso
 $host = "viaduct.proxy.rlwy.net";
 $user = "root";
-$pass = "fYAOFCYxlvvsNBEOykpAvZqoyoomwzWG";
+$pass = "xsvrBxDUraOXvCoGvtafxxojYaNFCvPp";
 $bd = "railway";
-$porta = "35418";
+$porta = "37611";
 
 // Executar conexão
 $conectar = @mysqli_connect($host,$user,$pass,$bd,$porta);
@@ -234,9 +234,9 @@ if (isset($_POST['quiz'])) {
             array_push($arrAlternativas, $row['alternativa_1'], $row['alternativa_2'],$row['alternativa_3']);
             array_push($arrAlternativasCertas, $row['Alternativa_Certa']);
         }
-        $stringPerguntas = implode("-",$arrPerguntas);
-        $stringAlternativas = implode("-",$arrAlternativas);
-        $stringAlternativasCertas = implode("-",$arrAlternativasCertas);
+        $stringPerguntas = implode("*",$arrPerguntas);
+        $stringAlternativas = implode("*",$arrAlternativas);
+        $stringAlternativasCertas = implode("*",$arrAlternativasCertas);
          echo "$stringPerguntas@@@@$stringAlternativas@@@@$stringAlternativasCertas";      
     }
 }
